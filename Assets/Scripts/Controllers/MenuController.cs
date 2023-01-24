@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using TMPro;
+using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class MenuController : MonoBehaviour
     public AudioMixer musicMixer;
     public TextMeshProUGUI soundsValue;
     public AudioMixer soundsMixer;
+    public Button loadButton;
 
     private Animator animator;
     private int _window = 0;
@@ -18,6 +20,7 @@ public class MenuController : MonoBehaviour
     public void Start()
     {
         animator = GetComponent<Animator>();
+        loadButton.interactable = SaveManager.IsGameSaved();
     }
 
     public void Update()
@@ -30,6 +33,12 @@ public class MenuController : MonoBehaviour
     }
 
     public void NewGame()
+    {
+        SaveManager.ClearSavedGame();
+        Load();
+    }
+
+    public void Load()
     {
         SceneManager.LoadScene(gameScene, LoadSceneMode.Single);
     }

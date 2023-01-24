@@ -1120,6 +1120,8 @@ MonoBehaviour:
   backgroundController: {fileID: 48699395}
   chooseController: {fileID: 1548364065}
   audioController: {fileID: 344903350}
+  data: {fileID: 11400000, guid: 73d7341b90a139744950da1a13f8b744, type: 2}
+  menuScene: Menu
 --- !u!1 &2040655521
 GameObject:
   m_ObjectHideFlags: 0

@@ -36,6 +36,11 @@ public class BottomBarController : MonoBehaviour
         return sentenceIndex;
     }
 
+    public void SetSentenceIndex(int sentenceIndex)
+    {
+        this.sentenceIndex = sentenceIndex;
+    }
+
     public void Hide()
     {
         if (!isHidden)
