@@ -7,6 +7,7 @@ public class BottomBarController : MonoBehaviour
 {
     public TextMeshProUGUI barText;
     public TextMeshProUGUI personNameText;
+    public AudioSource voicePlayer;
 
     private int sentenceIndex = -1;
     private StoryScene currentScene;
@@ -121,10 +122,20 @@ public class BottomBarController : MonoBehaviour
 
     private void PlaySentence(bool isAnimated = true)
     {
+        StoryScene.Sentence sentence = currentScene.sentences[sentenceIndex];
         speedFactor = 1f;
-        typingCoroutine = StartCoroutine(TypeText(currentScene.sentences[sentenceIndex].text));
-        personNameText.text = currentScene.sentences[sentenceIndex].speaker.speakerName;
-        personNameText.color = currentScene.sentences[sentenceIndex].speaker.textColor;
+        typingCoroutine = StartCoroutine(TypeText(sentence.text));
+        personNameText.text = sentence.speaker.speakerName;
+        personNameText.color = sentence.speaker.textColor;
+        if (sentence.audio)
+        {
+            voicePlayer.clip = sentence.audio;
+            voicePlayer.Play();
+        }
+        else
+        {
+            voicePlayer.Stop();
+        }
         ActSpeakers(isAnimated);
     }
 

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentences:
   - text: So there is a castle now...
+    audio: {fileID: 8300000, guid: c812ffc898331814887e9df5ee707f85, type: 3}
     speaker: {fileID: 11400000, guid: eddfe009b49d3484d8dfb5498d6a2f17, type: 2}
     actions:
     - speaker: {fileID: 11400000, guid: eddfe009b49d3484d8dfb5498d6a2f17, type: 2}
@@ -24,6 +25,7 @@ MonoBehaviour:
     music: {fileID: 8300000, guid: cfd9b775032f1b44a8309d0a5239016a, type: 3}
     sound: {fileID: 0}
   - text: Okay, let's sleep here
+    audio: {fileID: 8300000, guid: 7705757b9e4cee04abe8a18b76efed5a, type: 3}
     speaker: {fileID: 11400000, guid: eddfe009b49d3484d8dfb5498d6a2f17, type: 2}
     actions:
     - speaker: {fileID: 11400000, guid: eddfe009b49d3484d8dfb5498d6a2f17, type: 2}
@@ -34,6 +36,7 @@ MonoBehaviour:
     music: {fileID: 0}
     sound: {fileID: 0}
   - text: The end?
+    audio: {fileID: 8300000, guid: 6d6c5e86374129c469e32516619c7ef5, type: 3}
     speaker: {fileID: 11400000, guid: 755db819ff1a2ea4aa12594b5b3997b8, type: 2}
     actions:
     - speaker: {fileID: 11400000, guid: eddfe009b49d3484d8dfb5498d6a2f17, type: 2}
