@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class MenuController : MonoBehaviour
 {
-    public string gameScene;
+    public string loaderScene;
 
     public TextMeshProUGUI musicValue;
     public AudioMixer musicMixer;
@@ -40,7 +40,7 @@ public class MenuController : MonoBehaviour
 
     public void Load()
     {
-        SceneManager.LoadScene(gameScene, LoadSceneMode.Single);
+        SceneManager.LoadScene(loaderScene, LoadSceneMode.Additive);
     }
 
     public void ShowOptions()
